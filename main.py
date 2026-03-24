@@ -16,7 +16,7 @@ class HttpHandler(BaseHTTPRequestHandler):
             self.send_html_file('message.html')
         elif pr_url.path == '/read':
             env = Environment(loader=FileSystemLoader('read'))
-            template = env.get_template('messages.html')
+            template = env.get_template('read.html')
             DATA_FILE = "storage/data.json"
             messages = {}
             if os.path.exists(DATA_FILE):
